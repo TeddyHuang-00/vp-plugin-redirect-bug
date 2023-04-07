@@ -3,7 +3,7 @@ import { redirectPlugin } from "vuepress-plugin-redirect";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/vp-plugin-redirect-bug/",
 
   locales: {
     "/en/": {
