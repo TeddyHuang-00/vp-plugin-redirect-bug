@@ -1,11 +1,12 @@
 import { defineUserConfig } from "vuepress";
+import { redirectPlugin } from "vuepress-plugin-redirect";
 import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/",
 
   locales: {
-    "/": {
+    "/en/": {
       lang: "en-US",
       title: "Blog Demo",
       description: "A blog demo for vuepress-theme-hope",
@@ -21,4 +22,14 @@ export default defineUserConfig({
 
   // Enable it with pwa
   // shouldPrefetch: false,
+
+  plugins: [
+    redirectPlugin({
+      autoLocale: true,
+      localeConfig: {
+        "/zh/": ["zh-CN", "zh-TW", "zh"],
+        "/en/": ["en-US", "en-UK", "en"],
+      },
+    }),
+  ],
 });
