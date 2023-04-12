@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://TeddyHuang-00.github.io/vp-plugin-redirect-bug/sitemap.xml
